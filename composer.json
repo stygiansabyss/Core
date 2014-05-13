@@ -1,47 +1,45 @@
 {
-    "name": "syntax/core",
-    "description": "A core set of features for laravel sites.",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Stygian",
-            "email": "stygian.warlock.v2@gmail.com"
-        },
-        {
-            "name": "Riddles",
-            "email": "riddles@dev-toolbox.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "4.1.*",
-        "laravel/framework": "4.1.*",
-        "intervention/image": "*",
-        "mccool/laravel-auto-presenter": "*",
-        "anlutro/curl": "dev-master",
-        "vespakoen/menu": "dev-master"
-    },
-    "require-dev" {
-        "way/generators": "*"
-    },
-    "autoload": {
-        "classmap": [
-            "src/commands",
-            "src/controllers",
-            "src/database/migrations",
-            "src/database/seeds",
-            "src/models",
-            "src/presenters",
-            "src/services",
-            "src/views"
-        ],
-        "psr-4": {
-            "Syntax\\Core\\": "src/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    }
+	"name": "syntax/core",
+	"description": "A core set of features for laravel sites.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Stygian",
+			"email": "stygian.warlock.v2@gmail.com"
+		},
+		{
+			"name": "Riddles",
+			"email": "riddles@dev-toolbox.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"illuminate/support": ">=4.1.28",
+		"laravel/framework": ">=4.1.28",
+		"intervention/image": ">=1.6.3",
+		"mccool/laravel-auto-presenter": ">=1.0.0",
+		"anlutro/curl": ">=0.6.0",
+		"vespakoen/menu": ">=2.0.15"
+	},
+	"autoload": {
+		"classmap": [
+			"src/commands",
+			"src/controllers",
+			"src/database/migrations",
+			"src/database/seeds",
+			"src/models",
+			"src/presenters",
+			"src/services",
+			"src/views"
+		],
+		"files": ["src/macros/Form.php"],
+		"psr-4": {
+			"NukaCode\\Core\\": "src/NukaCode/Core"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0-dev"
+		}
+	}
 }

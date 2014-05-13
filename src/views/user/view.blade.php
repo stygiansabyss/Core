@@ -21,23 +21,23 @@
 							</tr>
 							<tr>
 								<td><strong>Full Name:</strong></td>
-								<td>{{ $user->fullName }}</td>
+								<td>{{ $user->present()->fullName }}</td>
 							</tr>
 							<tr>
 								<td><strong>Email:</strong></td>
-								<td>{{ $user->emailLink }}</td>
+								<td>{{ $user->present()->emailLink }}</td>
 							</tr>
 							<tr>
 								<td><strong>Join Date:</strong></td>
-								<td>{{ $user->createdAtReadable }}</td>
+								<td>{{ $user->present()->createdAtReadable }}</td>
 							</tr>
 							<tr>
 								<td><strong>Last Active:</strong></td>
-								<td>{{ $user->lastActiveReadable }}</td>
+								<td>{{ $user->present()->lastActiveReadable }}</td>
 							</tr>
 							<tr>
 								<td><strong>Status:</strong></td>
-								<td>{{ $user->online }}</td>
+								<td>{{ $user->present()->online }}</td>
 							</tr>
 							@if ($user->id != $activeUser->id)
 								<tr>

@@ -12,7 +12,7 @@ class ConfigureCommand extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'syntax:configure';
+	protected $name = 'nuka:configure';
 
 	/**
 	 * The console command description.

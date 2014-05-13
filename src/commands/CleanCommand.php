@@ -12,7 +12,7 @@ class CleanCommand extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'syntax:clean';
+	protected $name = 'nuka:clean';
 
 	/**
 	 * The console command description.
@@ -22,25 +22,25 @@ class CleanCommand extends Command {
 	protected $description = 'Run the final commands to set up the site.';
 
 	/**
-	 * An array of available syntax packages
+	 * An array of available nuka packages
 	 *
 	 * @var string[]
 	 */
-	protected $syntaxPackages = ['chat', 'forum'];
+	protected $nukaPackages = ['chat', 'forum'];
 
 	/**
 	 * An array of packages that will need a config loaded
 	 *
 	 * @var string[]
 	 */
-	protected $syntaxPackagesWithConfig = ['chat'];
+	protected $nukaPackagesWithConfig = ['chat'];
 
 	/**
-	 * An object containing the core syntax config details
+	 * An object containing the core nuka config details
 	 *
 	 * @var string[]
 	 */
-	protected $syntaxCoreDetails;
+	protected $nukaCoreDetails;
 
 	/**
 	 * The output stream for any artisan commands
@@ -56,7 +56,7 @@ class CleanCommand extends Command {
 	{
 		parent::__construct();
 
-		$this->syntaxCoreDetails = new stdClass();
+		$this->nukaCoreDetails = new stdClass();
 		$this->stream            = fopen('php://output', 'w');
 	}
 
@@ -88,8 +88,8 @@ class CleanCommand extends Command {
 		Artisan::call('key:generate', array(), new StreamOutput($this->stream));
 		$this->comment('Adding the migration table...');
 		Artisan::call('migrate:install', array(), new StreamOutput($this->stream));
-		Artisan::call('syntax:database', array(), new StreamOutput($this->stream));
-		Artisan::call('syntax:gulp', array(), new StreamOutput($this->stream));
+		Artisan::call('nuka:database', array(), new StreamOutput($this->stream));
+		Artisan::call('nuka:gulp', array(), new StreamOutput($this->stream));
 	}
 
 	protected function runGulp()

@@ -12,14 +12,14 @@ class InstallCommand extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'syntax:install';
+	protected $name = 'nuka:install';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Run the everything needed to get a syntax site up and running.';
+	protected $description = 'Run the everything needed to get a nuka site up and running.';
 
 	/**
 	 * The output stream for any artisan commands
@@ -45,9 +45,9 @@ class InstallCommand extends Command {
 	public function fire()
 	{
 		$this->comment('Starting site installation...');
-		Artisan::call('syntax:configure', array(), new StreamOutput($this->stream));
-		Artisan::call('syntax:setup', array(), new StreamOutput($this->stream));
-		Artisan::call('syntax:clean', array(), new StreamOutput($this->stream));
+		Artisan::call('nuka:configure', array(), new StreamOutput($this->stream));
+		Artisan::call('nuka:setup', array(), new StreamOutput($this->stream));
+		Artisan::call('nuka:clean', array(), new StreamOutput($this->stream));
 		$this->comment('Installation complete!');
 	}
 

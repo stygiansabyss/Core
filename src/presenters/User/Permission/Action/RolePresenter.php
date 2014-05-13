@@ -1,4 +1,4 @@
-<?php namespace Syntax\Core;
+<?php namespace NukaCode\Core;
 
 class User_Permission_Action_RolePresenter extends CorePresenter {
 
