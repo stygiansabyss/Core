@@ -80,7 +80,7 @@ class CoreServiceProvider extends ServiceProvider {
 			'HTML'                        => 'NukaCode\Core\Facades\HTML',
 			'View'                        => 'NukaCode\Core\Facades\View',
 			'Mobile'                      => 'NukaCode\Core\Facades\Mobile',
-			'CoreView'                    => 'NukaCode\Core\Facades\Core\View',
+			'CoreView'                    => 'NukaCode\Core\Facades\CoreView',
 			'CoreImage'                   => 'NukaCode\Core\Facades\CoreImage',
 			'Crud'                        => 'NukaCode\Core\Facades\Crud',
 			'Wizard'                      => 'NukaCode\Core\Facades\Wizard',
