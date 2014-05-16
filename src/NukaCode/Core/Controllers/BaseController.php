@@ -7,7 +7,7 @@ use Auth,
 	Menu,
 	HTML,
 	Post;
-use NukaCode\Core\Facades\Core\View as CoreView;
+use NukaCode\Core\Facades\CoreView as CoreView;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 abstract class BaseController extends Controller {

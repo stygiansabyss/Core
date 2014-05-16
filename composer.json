@@ -23,13 +23,8 @@
 	},
 	"autoload": {
 		"classmap": [
-			"src/commands",
-			"src/controllers",
 			"src/database/migrations",
 			"src/database/seeds",
-			"src/models",
-			"src/presenters",
-			"src/services",
 			"src/views"
 		],
 		"files": ["src/macros/Form.php"],

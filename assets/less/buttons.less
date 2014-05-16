@@ -2,4 +2,114 @@
 
 .btn-inverse {
   .button-variant(@btn-primary-color; @gray-dark; #000000);
+}.btn {
+    color: #ffffff !important;
+    // .btn-gradient(#ffffff, #e6e6e6);
+    // .text-shadow(~"-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000");
+}
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+    color: #333333;
+    background-color: #e6e6e6;
+    .text-shadow(none);
+}
+.btn-primary, .fuelux .btn-primary {
+    background-color: @darkPrimary !important;
+    border-color: darken(@darkPrimary, 30%) !important;
+    color: #ffffff;
+    // .btn-gradient(@primaryColor, @darkPrimary);
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+    background-color: @primaryColor !important;
+    border-color: darken(@primaryColor, 30%) !important;
+}
+.btn-warning {
+    background-color: @darkWarning !important;
+    border-color: darken(@darkWarning, 30%) !important;
+    color: #ffffff;
+    // .btn-gradient(@warningColor, @darkWarning);
+}
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+    background-color: @warningColor !important;
+    border-color: darken(@warningColor, 30%) !important;
+}
+.btn-danger {
+    background-color: @darkError !important;
+    border-color: darken(@darkError, 30%) !important;
+    color: #ffffff;
+    // .btn-gradient(@errorColor, @darkError);
+}
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+    background-color: @errorColor !important;
+    border-color: darken(@errorColor, 30%) !important;
+}
+.btn-success {
+    background-color: @darkSuccess !important;
+    border-color: darken(@darkSuccess, 30%) !important;
+    color: #ffffff;
+    // .btn-gradient(@successColor, @darkSuccess);
+}
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+    background-color: @successColor !important;
+    border-color: darken(@successColor, 30%) !important;
+}
+.btn-info {
+    background-color: @darkInfo !important;
+    border-color: darken(@darkInfo, 30%) !important;
+    color: #ffffff;
+    // .btn-gradient(@infoColor, @darkInfo);
+}
+.btn-info:hover,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+    background-color: @infoColor !important;
+    border-color: darken(@infoColor, 30%) !important;
+}
+.btn-inverse {
+    background-color: #222222 !important;
+    border-color: darken(#222222, 30%) !important;
+    color: #ffffff;
+    // .btn-gradient(#444444, #222222);
+}
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+    background-color: #444444 !important;
+    border-color: darken(#444444, 30%) !important;
+}
+.btn-file {
+    & > input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        font-size: 23px;
+        cursor: pointer;
+        .opacity(0);
+        transform: translate(-300px, 0) scale(4);
+        direction: ltr;
+    }
 }

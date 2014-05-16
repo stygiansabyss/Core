@@ -1,1 +1,131 @@
 @import "../../../../twitter/bootstrap/less/tables";
+
+table {
+    & > caption {
+        color: @primaryColor;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+}
+.table-striped tbody > tr:nth-child(odd) > td {
+    background-color: #e5e5e5;
+}
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #666666;
+}
+.table.table-inner th, .table.table-inner td {
+    border-top: none;
+}
+.table {
+  .text-center {
+    td {
+      text-align: center !important;
+    }
+  }
+  &.table-inner {
+      padding: 0;
+      margin: 0;
+  }
+  & > tbody {
+    & > tr {
+      & > .danger {
+        background-color: @darkError;
+        & :hover {
+          background-color: lighten(@darkError, 20%);
+        }
+      }
+      & > .info {
+        background-color: @infoColor;
+        & :hover {
+          background-color: lighten(@infoColor, 20%);
+        }
+      }
+      & > .success {
+        background-color: @successColor;
+        & :hover {
+          background-color: lighten(@successColor, 20%);
+        }
+      }
+      & > .warning {
+        background-color: @warningColor;
+        & :hover {
+          background-color: lighten(@warningColor, 20%);
+        }
+      }
+      & > .primary {
+        background-color: @primaryColor;
+        & :hover {
+          background-color: lighten(@primaryColor, 20%);
+        }
+      }
+    }
+  }
+  thead {
+    & > tr {
+        & > th {
+            border-bottom: 2px solid #121212;
+        }
+    }
+  }
+  tbody {
+    tr {
+      & > td {
+        border-top: 1px solid #121212;
+      }
+      &.error {
+        & > td {
+          background-color: @darkError;
+        }
+        &:hover {
+          & > td {
+            background-color: lighten(@darkError, 20%);
+          }
+        }
+      }
+      &.info {
+        & > td {
+          background-color: @infoColor;
+        }
+        &:hover {
+          & > td {
+            background-color: lighten(@infoColor, 20%);
+          }
+        }
+      }
+      &.success {
+        & > td {
+          background-color: @successColor;
+        }
+        &:hover {
+          & > td {
+            background-color: lighten(@successColor, 20%);
+          }
+        }
+      }
+      &.warning {
+        & > td {
+          background-color: @warningColor;
+        }
+        &:hover {
+          & > td {
+            background-color: lighten(@warningColor, 20%);
+          }
+        }
+      }
+      &.primary {
+        & > td {
+          background-color: @primaryColor;
+        }
+        &:hover {
+          & > td {
+            background-color: lighten(@primaryColor, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+td {
+  vertical-align: middle !important;
+}

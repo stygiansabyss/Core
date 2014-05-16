@@ -1,0 +1,94 @@
+
+legend {
+  .horizontal-rule-dark;
+  color: #fff;
+}
+
+select,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  color: @ds_inputColor;
+  .darkwell;
+  .placeholder;
+  // Default: 20px. Need to compensate for the inset look so that it lines up with pre/appended elements.
+  // TODO: 21px if pre/appended with a span, 22px if pre/appended with button.
+  height: 21px
+}
+
+textarea { // TODO: DRY me up.
+  color: @ds_inputColor;
+  .darkwell;
+  .placeholder;
+}
+
+// Need to compensate for inset + 4px padding.
+select { height: 29px; }
+
+.input-prepend .add-on,
+.input-append .add-on {
+  background: #444;
+  color: @text-color;
+  border-color: #111;
+  text-shadow: 0 1px 0 black;
+}
+
+.form-actions {
+  border-top-color: #222;
+}
+.well .form-actions {
+  border-top-color: #000;
+  background-color: rgba(0,0,0, .3);
+  margin-left: -17px;
+  margin-right: -17px;
+  margin-bottom: -17px;
+}
+
+.help-inline,
+.help-block {
+  color: #999;
+}
+.control-group {
+  &.warning { .controls(@warning); }
+  &.success { .controls(@success); }
+  &.error { .controls(@error); }
+  &.info { .controls(@info); }
+}
+
+// TODO: DRY me. Remove redundancy.
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  //color: #b94a48;
+  border-color: @error;
+}
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: @error;
+  box-shadow: 0 0 6px @error;
+}
+select {
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 11px;
+    //height: 11px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid #202020; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+  }
+}

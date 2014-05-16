@@ -1,1 +1,64 @@
 @import "../../../../twitter/bootstrap/less/type";
+a {
+    color: @primaryColor;
+    &:visited {
+        color: darken(@primaryColor, 15%);
+    }
+    &:hover {
+        color: lighten(saturate(@primaryColor, 10%), 30%) !important;
+    }
+}
+.boardLink {
+    text-align: left !important;
+    vertical-align: middle !important;
+    a {
+        font-weight: bold;
+        font-size: 110%;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+    color: @primaryColor;
+}
+.text-primary {
+    color: @primaryColor;
+}
+.text-info {
+  color: @infoColor !important;
+}
+.text-success {
+  color: @successColor !important;
+}
+.text-warning {
+  color: @warningColor !important;
+}
+.text-error {
+  color: @errorColor !important;
+}
+.help-primary {
+  color: @primaryColor;
+}
+.text-disabled {
+  color: #aaa !important;
+}
+.text-middle {
+  vertical-align: middle !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.hide {
+    display: none;
+}
+.page-header {
+    border-bottom: 1px solid #eeeeee;
+}
