@@ -62,7 +62,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     .highlightColor(@siteStyle);
-    background-color: @grey;
+    background-color: @gray;
 }
 #header {
   margin: 0px 5%;
@@ -94,7 +94,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: fade(@primaryColor, 50%);
+  background: fade(@brand-primary, 50%);
   -moz-transition: all .3s linear;
   -webkit-transition: all .3s linear;
   -ms-transition: all .3s linear;
@@ -105,12 +105,12 @@ body {
 /////////////////////////////////////////////////////// Links /////////////////////////////////////////////////////////
 */
 a {
-    color: @primaryColor;
+    color: @brand-primary;
     &:visited {
-        color: darken(@primaryColor, 15%);
+        color: darken(@brand-primary, 15%);
     }
     &:hover {
-        color: lighten(saturate(@primaryColor, 10%), 30%) !important;
+        color: lighten(saturate(@brand-primary, 10%), 30%) !important;
     }
 }
 .boardLink {
@@ -130,30 +130,30 @@ a {
   padding: 0px;
   & > li {
     & > a {
-      background: @grey, 20%;
-      border-color: darken(@grey, 20%);
-      color: @primaryColor;
+      background: @gray, 20%;
+      border-color: darken(@gray, 20%);
+      color: @brand-primary;
       &:hover {
-        border-color:darken(@grey, 20%);
+        border-color:darken(@gray, 20%);
       }
     }
   }
   & > .active {
     & > span {
-      border-color: darken(@grey, 20%);
+      border-color: darken(@gray, 20%);
       &:hover {
-        background-color: @primaryColor;
-        border-color: darken(@grey, 20%);
+        background-color: @brand-primary;
+        border-color: darken(@gray, 20%);
       }
     }
   }
   & > .disabled {
     & > span {
-      background-color: darken(@grey, 20%);
-      border-color: darken(@grey, 20%);
+      background-color: darken(@gray, 20%);
+      border-color: darken(@gray, 20%);
       &:hover {
-        background-color: darken(@grey, 20%);
-        border-color: darken(@grey, 20%);
+        background-color: darken(@gray, 20%);
+        border-color: darken(@gray, 20%);
       }
     }
   }
@@ -163,25 +163,25 @@ a {
 /////////////////////////////////////////////////////// Typography /////////////////////////////////////////////////////////
 */
 h1,h2,h3,h4,h5,h6 {
-    color: @primaryColor;
+    color: @brand-primary;
 }
 .text-primary {
-    color: @primaryColor;
+    color: @brand-primary;
 }
 .text-info {
-  color: @infoColor !important;
+  color: @brand-info !important;
 }
 .text-success {
-  color: @successColor !important;
+  color: @brand-success !important;
 }
 .text-warning {
-  color: @warningColor !important;
+  color: @brand-warning !important;
 }
 .text-error {
-  color: @errorColor !important;
+  color: @brand-danger !important;
 }
 .help-primary {
-  color: @primaryColor;
+  color: @brand-primary;
 }
 .text-disabled {
   color: #aaa !important;
@@ -215,10 +215,10 @@ h1,h2,h3,h4,h5,h6 {
     hr {
         border: none;
         height: 1px;
-        .linear-gradient(#232728, @primaryColor);
+        .linear-gradient(#232728, @brand-primary);
     }
     .well-title {
-        background: @primaryColor;
+        background: @brand-primary;
         color: #000;
         position: relative;
         top: -17px;
@@ -233,7 +233,7 @@ h1,h2,h3,h4,h5,h6 {
         .box-shadow(~"rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset");
     }
     .well-title-bottom {
-        background: @primaryColor;
+        background: @brand-primary;
         color: #000;
         position: relative;
         bottom: -18px;
@@ -258,7 +258,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .well-small {
     .well-title {
-        background: @primaryColor;
+        background: @brand-primary;
         color: #000;
         position: relative;
         top: -7px;
@@ -274,7 +274,7 @@ h1,h2,h3,h4,h5,h6 {
         .box-shadow(~"rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset");
     }
     .well-title-bottom {
-        background: @primaryColor;
+        background: @brand-primary;
         color: #000;
         position: relative;
         bottom: -8px;
@@ -336,14 +336,14 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 4px;
   }
   .panel-default > .panel-heading {
-    color: saturate(@primaryColor, 50%);
+    color: saturate(@brand-primary, 50%);
     .box-shadow(~"rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset");
     background: #202020;
     background-color: rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #121212;
   }
   .panel-footer {
-    color: saturate(@primaryColor, 50%);
+    color: saturate(@brand-primary, 50%);
     .box-shadow(~"rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset");
     background: #202020;
     background-color: rgba(0, 0, 0, 0.3);
@@ -353,7 +353,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .panelDark(@siteStyle);
 .panel-btn {
-  background: @primaryColor;
+  background: @brand-primary;
   .box-shadow(~"rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset");
   float: right;
   height: 39px;
@@ -389,8 +389,8 @@ h1,h2,h3,h4,h5,h6 {
 .panel-primary > .panel-heading {
   .box-shadow(~"rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset");
   color: #000;
-  background-color: @primaryColor;
-  border-color: @primaryColor;
+  background-color: @brand-primary;
+  border-color: @brand-primary;
   text-align: center;
   font-weight: bold;
   border-bottom: 1px solid #121212;
@@ -406,7 +406,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .list-group-item:hover,
 .list-group-item.active {
-  background: @primaryColor;
+  background: @brand-primary;
   h1,h2,h3,h4,h5,h6 {
     color: #000;
   }
@@ -423,7 +423,7 @@ h1,h2,h3,h4,h5,h6 {
     color: #000;
   }
   &:hover {
-    background: @errorColor;
+    background: @brand-danger;
   }
 }
 /*
@@ -446,11 +446,11 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input, .form-control {
-    background-color: @grey;
+    background-color: @gray;
     padding: 4px 4px 4px 4px;
     font-size: 13px;
-    color: @primaryColor;
-    border: 1px solid @primaryColor;
+    color: @brand-primary;
+    border: 1px solid @brand-primary;
     vertical-align: middle !important;
     height: 34px;
 }
@@ -470,14 +470,14 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-    border-color: fadeout(@primaryColor, 20%);
+    border-color: fadeout(@brand-primary, 20%);
     outline: 0;
     outline: thin dotted 9;
     .inner-shadow(~"0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(167,195,199,0.6)");
     vertical-align: middle !important;
 }
 .input-group-addon {
-  border: 1px solid @primaryColor;
+  border: 1px solid @brand-primary;
 }
 .input-append .uneditable-input,
 .input-prepend .uneditable-input {
@@ -488,13 +488,13 @@ input[type="color"]:focus,
     display: inline-block;
 }
 .control-group.primary .control-label, .control-group.primary .help-block, .control-group.primary .help-inline {
-    color: @primaryColor;
+    color: @brand-primary;
 }
 .control-group.primary .checkbox, .control-group.primary .radio, .control-group.primary input, .control-group.primary select, .control-group.primary textarea {
-    color: @primaryColor;
+    color: @brand-primary;
 }
 .control-group.primary input, .control-group.primary select, .control-group.primary textarea {
-    border-color: @primaryColor;
+    border-color: @brand-primary;
     .inner-shadow(0 1px 1px rgba(0,0,0,0.075));
     vertical-align: middle !important;
 }
@@ -504,19 +504,19 @@ input[type="color"]:focus,
     vertical-align: middle !important;
 }
 .control-group.primary .input-prepend .add-on, .control-group.primary .input-append .add-on {
-    color: @primaryColor;
+    color: @brand-primary;
     background-color: #fcf8e3;
-    border-color: @primaryColor;
+    border-color: @brand-primary;
     vertical-align: middle !important;
 }
 .control-group.info .control-label, .control-group.info .help-block, .control-group.info .help-inline {
-    color: @infoColor;
+    color: @brand-info;
 }
 .control-group.info .checkbox, .control-group.info .radio, .control-group.info input, .control-group.info select, .control-group.info textarea {
-    color: @infoColor;
+    color: @brand-info;
 }
 .control-group.info input, .control-group.info select, .control-group.info textarea {
-    border-color: @infoColor;
+    border-color: @brand-info;
     .inner-shadow(~"0 1px 1px rgba(0,0,0,0.075)");
     vertical-align: middle !important;
 }
@@ -526,19 +526,19 @@ input[type="color"]:focus,
     vertical-align: middle !important;
 }
 .control-group.info .input-prepend .add-on, .control-group.info .input-append .add-on {
-    color: @infoColor;
+    color: @brand-info;
     background-color: #fcf8e3;
-    border-color: @infoColor;
+    border-color: @brand-info;
     vertical-align: middle !important;
 }
 .control-group.warning .control-label, .control-group.warning .help-block, .control-group.warning .help-inline {
-    color: @warningColor;
+    color: @brand-warning;
 }
 .control-group.warning .checkbox, .control-group.warning .radio, .control-group.warning input, .control-group.warning select, .control-group.warning textarea {
-    color: @warningColor;
+    color: @brand-warning;
 }
 .control-group.warning input, .control-group.warning select, .control-group.warning textarea {
-    border-color: @warningColor;
+    border-color: @brand-warning;
     .inner-shadow(~"0 1px 1px rgba(0,0,0,0.075)");
     vertical-align: middle !important;
 }
@@ -548,19 +548,19 @@ input[type="color"]:focus,
     vertical-align: middle !important;
 }
 .control-group.warning .input-prepend .add-on, .control-group.warning .input-append .add-on {
-    color: @warningColor;
+    color: @brand-warning;
     background-color: #fcf8e3;
-    border-color: @warningColor;
+    border-color: @brand-warning;
     vertical-align: middle !important;
 }
 .control-group.success .control-label, .control-group.success .help-block, .control-group.success .help-inline {
-    color: @successColor;
+    color: @brand-success;
 }
 .control-group.success .checkbox, .control-group.success .radio, .control-group.success input, .control-group.success select, .control-group.success textarea {
-    color: @successColor;
+    color: @brand-success;
 }
 .control-group.success input, .control-group.success select, .control-group.success textarea {
-    border-color: @successColor;
+    border-color: @brand-success;
     .inner-shadow(~"0 1px 1px rgba(0,0,0,0.075)");
     vertical-align: middle !important;
 }
@@ -570,19 +570,19 @@ input[type="color"]:focus,
     vertical-align: middle !important;
 }
 .control-group.success .input-prepend .add-on, .control-group.success .input-append .add-on {
-    color: @successColor;
+    color: @brand-success;
     background-color: #fcf8e3;
-    border-color: @successColor;
+    border-color: @brand-success;
     vertical-align: middle !important;
 }
 .control-group.error .control-label, .control-group.error .help-block, .control-group.error .help-inline {
-    color: @errorColor;
+    color: @brand-danger;
 }
 .control-group.error .checkbox, .control-group.error .radio, .control-group.error input, .control-group.error select, .control-group.error textarea {
-    color: @errorColor;
+    color: @brand-danger;
 }
 .control-group.error input, .control-group.error select, .control-group.error textarea {
-    border-color: @errorColor;
+    border-color: @brand-danger;
     .inner-shadow(~"0 1px 1px rgba(0,0,0,0.075)");
     vertical-align: middle !important;
 }
@@ -592,9 +592,9 @@ input[type="color"]:focus,
     vertical-align: middle !important;
 }
 .control-group.error .input-prepend .add-on, .control-group.error .input-append .add-on {
-    color: @errorColor;
+    color: @brand-danger;
     background-color: #fcf8e3;
-    border-color: @errorColor;
+    border-color: @brand-danger;
     vertical-align: middle !important;
 }
 /*
@@ -644,14 +644,14 @@ div.list-glow, div.list-glow-sm {
       padding: 0;
       margin: 2px 0px 0px;
       border: none;
-      border-left: 6px solid @grey;
+      border-left: 6px solid @gray;
       vertical-align: baseline;
       &.active {
         div.list-glow-group-item {
           & > div {
             & > .badge {
-              background: saturate(lighten(@primaryColor, 15%), 40%);
-              box-shadow: 0 0 40px saturate(lighten(@primaryColor, 15%), 40%);
+              background: saturate(lighten(@brand-primary, 15%), 40%);
+              box-shadow: 0 0 40px saturate(lighten(@brand-primary, 15%), 40%);
             }
           }
         }
@@ -667,73 +667,73 @@ div.list-glow, div.list-glow-sm {
         border-bottom-left-radius: 4px;
       }
       &:hover {
-        background: rgba(red(@grey), green(@grey), blue(@grey), .4);
+        background: rgba(red(@gray), green(@gray), blue(@gray), .4);
       }
       &.announcement:before, &.wontFix:before {
         content: '';
-        background: saturate(lighten(@errorColor, 15%), 40%) !important;
+        background: saturate(lighten(@brand-danger, 15%), 40%) !important;
         position: absolute;
         top: 0;
         left: -6px;
         width: 6px;
         height: 100%;
-        box-shadow: 0 0 40px saturate(lighten(@errorColor, 15%), 40%) !important;
+        box-shadow: 0 0 40px saturate(lighten(@brand-danger, 15%), 40%) !important;
       }
       &.sticky:before, &.inProgress:before {
         content: '';
-        background: saturate(lighten(@warningColor, 15%), 40%) !important;
+        background: saturate(lighten(@brand-warning, 15%), 40%) !important;
         position: absolute;
         top: 0;
         left: -6px;
         width: 6px;
         height: 100%;
-        box-shadow: 0 0 40px saturate(lighten(@warningColor, 15%), 40%) !important;
+        box-shadow: 0 0 40px saturate(lighten(@brand-warning, 15%), 40%) !important;
       }
       &.application:before, &.open:before {
         content: '';
-        background: saturate(lighten(@infoColor, 15%), 40%) !important;
+        background: saturate(lighten(@brand-info, 15%), 40%) !important;
         position: absolute;
         top: 0;
         left: -6px;
         width: 6px;
         height: 100%;
-        box-shadow: 0 0 40px saturate(lighten(@infoColor, 15%), 40%) !important;
+        box-shadow: 0 0 40px saturate(lighten(@brand-info, 15%), 40%) !important;
       }
       &.resolved:before, &.online:before {
         content: '';
-        background: saturate(lighten(@successColor, 15%), 40%) !important;
+        background: saturate(lighten(@brand-success, 15%), 40%) !important;
         position: absolute;
         top: 0;
         left: -6px;
         width: 6px;
         height: 100%;
-        box-shadow: 0 0 40px saturate(lighten(@successColor, 15%), 40%) !important;
+        box-shadow: 0 0 40px saturate(lighten(@brand-success, 15%), 40%) !important;
       }
       &.unread:before, &.active:before {
         content: '';
-        background: saturate(lighten(@primaryColor, 15%), 40%);
+        background: saturate(lighten(@brand-primary, 15%), 40%);
         position: absolute;
         top: 0;
         left: -6px;
         width: 6px;
         height: 100%;
-        box-shadow: 0 0 40px saturate(lighten(@primaryColor, 15%), 40%);
+        box-shadow: 0 0 40px saturate(lighten(@brand-primary, 15%), 40%);
       }
       &:hover:before {
         content: '';
-        background: saturate(lighten(@primaryColor, 15%), 40%) !important;
+        background: saturate(lighten(@brand-primary, 15%), 40%) !important;
         position: absolute;
         top: 0;
         left: -6px;
         width: 6px;
         height: 100%;
-        box-shadow: 0 0 40px saturate(lighten(@primaryColor, 15%), 40%) !important;
+        box-shadow: 0 0 40px saturate(lighten(@brand-primary, 15%), 40%) !important;
       }
       div.list-glow-group-item {
         padding: 13px 0 13px 20px;
         width: 100%;
         height: auto!important;
-        border-top: 1px solid lighten(@grey, 10%);
+        border-top: 1px solid lighten(@gray, 10%);
         &:after, &:before {
           content: " ";
           display: table;
@@ -769,7 +769,7 @@ div.list-glow, div.list-glow-sm {
 */
 table {
     & > caption {
-        color: @primaryColor;
+        color: @brand-primary;
         font-weight: bold;
         letter-spacing: 2px;
     }
@@ -803,27 +803,27 @@ table {
         }
       }
       & > .info {
-        background-color: @infoColor;
+        background-color: @brand-info;
         & :hover {
-          background-color: lighten(@infoColor, 20%);
+          background-color: lighten(@brand-info, 20%);
         }
       }
       & > .success {
-        background-color: @successColor;
+        background-color: @brand-success;
         & :hover {
-          background-color: lighten(@successColor, 20%);
+          background-color: lighten(@brand-success, 20%);
         }
       }
       & > .warning {
-        background-color: @warningColor;
+        background-color: @brand-warning;
         & :hover {
-          background-color: lighten(@warningColor, 20%);
+          background-color: lighten(@brand-warning, 20%);
         }
       }
       & > .primary {
-        background-color: @primaryColor;
+        background-color: @brand-primary;
         & :hover {
-          background-color: lighten(@primaryColor, 20%);
+          background-color: lighten(@brand-primary, 20%);
         }
       }
     }
@@ -852,41 +852,41 @@ table {
       }
       &.info {
         & > td {
-          background-color: @infoColor;
+          background-color: @brand-info;
         }
         &:hover {
           & > td {
-            background-color: lighten(@infoColor, 20%);
+            background-color: lighten(@brand-info, 20%);
           }
         }
       }
       &.success {
         & > td {
-          background-color: @successColor;
+          background-color: @brand-success;
         }
         &:hover {
           & > td {
-            background-color: lighten(@successColor, 20%);
+            background-color: lighten(@brand-success, 20%);
           }
         }
       }
       &.warning {
         & > td {
-          background-color: @warningColor;
+          background-color: @brand-warning;
         }
         &:hover {
           & > td {
-            background-color: lighten(@warningColor, 20%);
+            background-color: lighten(@brand-warning, 20%);
           }
         }
       }
       &.primary {
         & > td {
-          background-color: @primaryColor;
+          background-color: @brand-primary;
         }
         &:hover {
           & > td {
-            background-color: lighten(@primaryColor, 20%);
+            background-color: lighten(@brand-primary, 20%);
           }
         }
       }
@@ -917,71 +917,71 @@ td {
     background-color: @darkPrimary !important;
     border-color: darken(@darkPrimary, 30%) !important;
     color: #ffffff;
-    // .btn-gradient(@primaryColor, @darkPrimary);
+    // .btn-gradient(@brand-primary, @darkPrimary);
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-    background-color: @primaryColor !important;
-    border-color: darken(@primaryColor, 30%) !important;
+    background-color: @brand-primary !important;
+    border-color: darken(@brand-primary, 30%) !important;
 }
 .btn-warning {
     background-color: @darkWarning !important;
     border-color: darken(@darkWarning, 30%) !important;
     color: #ffffff;
-    // .btn-gradient(@warningColor, @darkWarning);
+    // .btn-gradient(@brand-warning, @darkWarning);
 }
 .btn-warning:hover,
 .btn-warning:active,
 .btn-warning.active,
 .btn-warning.disabled,
 .btn-warning[disabled] {
-    background-color: @warningColor !important;
-    border-color: darken(@warningColor, 30%) !important;
+    background-color: @brand-warning !important;
+    border-color: darken(@brand-warning, 30%) !important;
 }
 .btn-danger {
     background-color: @darkError !important;
     border-color: darken(@darkError, 30%) !important;
     color: #ffffff;
-    // .btn-gradient(@errorColor, @darkError);
+    // .btn-gradient(@brand-danger, @darkError);
 }
 .btn-danger:hover,
 .btn-danger:active,
 .btn-danger.active,
 .btn-danger.disabled,
 .btn-danger[disabled] {
-    background-color: @errorColor !important;
-    border-color: darken(@errorColor, 30%) !important;
+    background-color: @brand-danger !important;
+    border-color: darken(@brand-danger, 30%) !important;
 }
 .btn-success {
     background-color: @darkSuccess !important;
     border-color: darken(@darkSuccess, 30%) !important;
     color: #ffffff;
-    // .btn-gradient(@successColor, @darkSuccess);
+    // .btn-gradient(@brand-success, @darkSuccess);
 }
 .btn-success:hover,
 .btn-success:active,
 .btn-success.active,
 .btn-success.disabled,
 .btn-success[disabled] {
-    background-color: @successColor !important;
-    border-color: darken(@successColor, 30%) !important;
+    background-color: @brand-success !important;
+    border-color: darken(@brand-success, 30%) !important;
 }
 .btn-info {
     background-color: @darkInfo !important;
     border-color: darken(@darkInfo, 30%) !important;
     color: #ffffff;
-    // .btn-gradient(@infoColor, @darkInfo);
+    // .btn-gradient(@brand-info, @darkInfo);
 }
 .btn-info:hover,
 .btn-info:active,
 .btn-info.active,
 .btn-info.disabled,
 .btn-info[disabled] {
-    background-color: @infoColor !important;
-    border-color: darken(@infoColor, 30%) !important;
+    background-color: @brand-info !important;
+    border-color: darken(@brand-info, 30%) !important;
 }
 .btn-inverse {
     background-color: #222222 !important;
@@ -1014,15 +1014,15 @@ td {
 /////////////////////////////////////////////////////// Navigation /////////////////////////////////////////////////////////
 */
 .nav-tabs {
-    border-bottom: 1px solid darken(@grey, 20%);
+    border-bottom: 1px solid darken(@gray, 20%);
     & > li {
       & > a:hover {
-        border-color: transparent transparent darken(@grey, 20%) transparent;
+        border-color: transparent transparent darken(@gray, 20%) transparent;
       }
     }
     & > li.active {
       & > a, a:hover {
-        border-color: darken(@grey, 20%);
+        border-color: darken(@gray, 20%);
         border-bottom-color: transparent;
       }
     }
@@ -1034,7 +1034,7 @@ td {
         li {
             &.active {
                 a {
-                    background: @primaryColor;
+                    background: @brand-primary;
                     color: #000;
                     font-weight: bold;
                     margin: 0px 1px;
@@ -1060,7 +1060,7 @@ td {
 }
 .nav-stacked {
     .nav-title {
-        background: @primaryColor;
+        background: @brand-primary;
         color: #000;
         position: relative;
         top: 0px;
@@ -1083,10 +1083,10 @@ td {
     border: none;
 }
 .navbar {
-    border-bottom: 3px solid darken(@grey, 10%);
+    border-bottom: 3px solid darken(@gray, 10%);
     .navbar-brand {
         font-size: 20px;
-        color: @primaryColor;
+        color: @brand-primary;
     }
     .divider-vertical {
         height: 41px;
@@ -1098,14 +1098,14 @@ td {
                 color: #c6c6c6;
             }
             & > a:hover {
-                color: @primaryColor;
+                color: @brand-primary;
                 margin-bottom: -3px;
-                border-bottom: 3px solid @primaryColor;
+                border-bottom: 3px solid @brand-primary;
             }
         }
         & > li.dropdown.active {
             & > .dropdown-toggle {
-                color: @primaryColor;
+                color: @brand-primary;
             }
         }
     }
@@ -1117,9 +1117,9 @@ td {
     font-weight: bold;
 }
 .nav-header {
-    color: saturate(@primaryColor, 50%);
+    color: saturate(@brand-primary, 50%);
     background-color: rgba(0, 0, 0, .5);
-    .text-shadow(0 1px 0 @grey);
+    .text-shadow(0 1px 0 @gray);
 }
 .nav {
     li {
@@ -1131,27 +1131,27 @@ td {
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-    color: @primaryColor;
+    color: @brand-primary;
     margin-bottom: -3px;
     border-bottom: 3px solid @darkPrimary;
 }
 .navbar .nav > .active > a:hover {
-    color: @primaryColor;
+    color: @brand-primary;
     margin-bottom: -3px;
-    border-bottom: 3px solid @primaryColor;
+    border-bottom: 3px solid @brand-primary;
 }
 .navbar-nav.navbar-right:last-child {
     margin-right: 10px;
 }
 .dropdown-menu {
-    background-color: darken(@grey, 10%);
+    background-color: darken(@gray, 10%);
     & > li {
         & > a {
-            color: @primaryColor;
+            color: @brand-primary;
         }
         & > a:hover {
-            .linear-gradient-top(@primaryColor, @primaryColor, 0, lighten(@primaryColor, 10%), 100);
-            color: darken(@grey, 10%) !important;
+            .linear-gradient-top(@brand-primary, @brand-primary, 0, lighten(@brand-primary, 10%), 100);
+            color: darken(@gray, 10%) !important;
         }
     }
 }
@@ -1237,7 +1237,7 @@ td {
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid darken(@grey, 20%);
+  border-left: 1px solid darken(@gray, 20%);
 
   > li > a {
     margin-left: -1px;
@@ -1246,13 +1246,13 @@ td {
             border-radius: 0 4px 4px 0;
 
     &:hover, &:focus {
-      border-color: transparent transparent transparent darken(@grey, 20%);
+      border-color: transparent transparent transparent darken(@gray, 20%);
     }
   }
 
   > .active a {
     &, &:hover, &:focus {
-      border-color: darken(@grey, 20%) darken(@grey, 20%) darken(@grey, 20%) transparent;
+      border-color: darken(@gray, 20%) darken(@gray, 20%) darken(@gray, 20%) transparent;
       *border-left-color: #fff;
     }
   }
@@ -1342,14 +1342,14 @@ td {
 }
 .sub-navbar .sub-nav > li > a:focus,
 .sub-navbar .sub-nav > li > a:hover {
-    color: @primaryColor;
+    color: @brand-primary;
     text-decoration: none;
     background-color: transparent;
 }
 .sub-navbar .sub-nav > .active > a,
 .sub-navbar .sub-nav > .active > a:hover,
 .sub-navbar .sub-nav > .active > a:focus {
-    color: @primaryColor;
+    color: @brand-primary;
     text-decoration: none;
     background-color: transparent;
 }
@@ -1400,23 +1400,23 @@ td {
 }
 .progress-striped {
     .bar {
-        background-color: @primaryColor;
+        background-color: @brand-primary;
         background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
         .background-size(40px 40px);
         color: #000;
     }
 }
 .badge-important {
-    background-color: @errorColor;
+    background-color: @brand-danger;
 }
 .label-enhancement {
     background-color: @darkPrimary;
 }
 .label-question {
-    background-color: @infoColor;
+    background-color: @brand-info;
 }
 .label-bug {
-    background-color: @errorColor;
+    background-color: @brand-danger;
 }
 .label-duplicate, .label-invalid, .label-wontfix {
     background-color: #aaa;
@@ -1737,7 +1737,7 @@ td {
                     }
                 }
                 &.complete {
-                    color: @successColor;
+                    color: @brand-success;
                     background: @darkPrimary;
                     &:hover {
                         cursor: pointer;
@@ -1757,11 +1757,11 @@ td {
                     }
                 }
                 &.active {
-                    background: @primaryColor;
+                    background: @brand-primary;
                     color: #fff;
                     .chevron {
                         &:before {
-                            border-left: 11px solid @primaryColor;
+                            border-left: 11px solid @brand-primary;
                         }
                     }
                 }
@@ -1787,14 +1787,14 @@ ul.messenger.messenger-fixed.messenger-on-top, ul.messenger.messenger-fixed.mess
 ul {
     &.jqtree-tree {
         .jqtree-toggler {
-            color: @infoColor;
+            color: @brand-info;
             &:hover {
-                color: @primaryColor;
+                color: @brand-primary;
                 text-decoration: none;
             }
         }
         .jqtree-title {
-            color: @primaryColor;
+            color: @brand-primary;
         }
     }
 }

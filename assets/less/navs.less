@@ -1,14 +1,14 @@
 @import "../../../../twitter/bootstrap/less/navs";
 .nav-tabs {
-    border-bottom: 1px solid darken(@grey, 20%);
+    border-bottom: 1px solid darken(@gray, 20%);
     & > li {
       & > a:hover {
-        border-color: transparent transparent darken(@grey, 20%) transparent;
+        border-color: transparent transparent darken(@gray, 20%) transparent;
       }
     }
     & > li.active {
       & > a, a:hover {
-        border-color: darken(@grey, 20%);
+        border-color: darken(@gray, 20%);
         border-bottom-color: transparent;
       }
     }
@@ -20,7 +20,7 @@
         li {
             &.active {
                 a {
-                    background: @primaryColor;
+                    background: @brand-primary;
                     color: #000;
                     font-weight: bold;
                     margin: 0px 1px;
@@ -46,7 +46,7 @@
 }
 .nav-stacked {
     .nav-title {
-        background: @primaryColor;
+        background: @brand-primary;
         color: #000;
         position: relative;
         top: 0px;
@@ -75,9 +75,9 @@
     font-weight: bold;
 }
 .nav-header {
-    color: saturate(@primaryColor, 50%);
+    color: saturate(@brand-primary, 50%);
     background-color: rgba(0, 0, 0, .5);
-    .text-shadow(0 1px 0 @grey);
+    .text-shadow(0 1px 0 @gray);
 }
 .tabs-below, .tabs-right, .tabs-left {
   .nav-tabs {
@@ -161,7 +161,7 @@
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid darken(@grey, 20%);
+  border-left: 1px solid darken(@gray, 20%);
 
   > li > a {
     margin-left: -1px;
@@ -170,13 +170,13 @@
             border-radius: 0 4px 4px 0;
 
     &:hover, &:focus {
-      border-color: transparent transparent transparent darken(@grey, 20%);
+      border-color: transparent transparent transparent darken(@gray, 20%);
     }
   }
 
   > .active a {
     &, &:hover, &:focus {
-      border-color: darken(@grey, 20%) darken(@grey, 20%) darken(@grey, 20%) transparent;
+      border-color: darken(@gray, 20%) darken(@gray, 20%) darken(@gray, 20%) transparent;
       *border-left-color: #fff;
     }
   }
